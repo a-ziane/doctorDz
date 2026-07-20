@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor DZ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell" aria-label="Doctor DZ dashboard">
+      <aside class="sidebar">
+        <header class="brand">
+          <img class="brand-logo" src="assets/logo-mark.png" alt="Doctor DZ" />
+          <div>
+            <strong>Doctor DZ</strong>
+            <span>Clinical workspace</span>
+          </div>
+        </header>
+
+        <nav class="nav hidden" aria-label="Doctor navigation">
+          <button class="nav-item active" data-target="dashboard" aria-label="Dashboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3Zm10 8h8V11h-8ZM3 21h8v-6H3Zm10-12h8V3h-8Z" /></svg>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-item" data-target="appointments" aria-label="Appointments">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" /></svg>
+            <span>Appointments</span>
+          </button>
+          <button class="nav-item" data-target="queue" aria-label="Queue">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2m5-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+            <span>Queue</span>
+          </button>
+          <button class="nav-item" data-target="availability" aria-label="Availability">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h8m-8 5h4m-7 9h14a2 2 0 0 0 2-2V7l-4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" /></svg>
+            <span>Availability</span>
+          </button>
+          <button class="nav-item" data-target="profile" aria-label="Profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0m12-13a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" /></svg>
+            <span>Profile</span>
+          </button>
+        </nav>
+
+        <button class="ghost sidebar-logout hidden" data-action="logout">Logout</button>
+      </aside>
+
+      <section class="screen active" id="start-screen" data-screen="start" aria-labelledby="start-title"></section>
+      <section class="screen" id="signup-screen" data-screen="signup" aria-labelledby="signup-title"></section>
+      <section class="screen" id="login-screen" data-screen="login" aria-labelledby="login-title"></section>
+      <section class="screen" id="forgot-screen" data-screen="forgot" aria-labelledby="forgot-title"></section>
+      <section class="screen" id="confirm-screen" data-screen="confirm" aria-labelledby="confirm-title"></section>
+      <section class="screen" id="onboarding-screen" data-screen="onboarding" aria-labelledby="onboarding-title"></section>
+      <section class="screen" id="dashboard-screen" data-screen="dashboard" aria-labelledby="dashboard-title"></section>
+      <section class="screen" id="appointments-screen" data-screen="appointments" aria-labelledby="appointments-title"></section>
+      <section class="screen" id="queue-screen" data-screen="queue" aria-labelledby="queue-title"></section>
+      <section class="screen" id="availability-screen" data-screen="availability" aria-labelledby="availability-title"></section>
+      <section class="screen" id="profile-screen" data-screen="profile" aria-labelledby="profile-title"></section>
+
+      <nav class="bottom-nav hidden" aria-label="Mobile navigation">
+        <button class="nav-item active" data-target="dashboard" aria-label="Dashboard">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3Zm10 8h8V11h-8ZM3 21h8v-6H3Zm10-12h8V3h-8Z" /></svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-target="appointments" aria-label="Appointments">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4m8-4v4M3 10h18M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" /></svg>
+          <span>Appts</span>
+        </button>
+        <button class="nav-item" data-target="queue" aria-label="Queue">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2m5-2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+          <span>Queue</span>
+        </button>
+        <button class="nav-item" data-target="availability" aria-label="Availability">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7h8m-8 5h4m-7 9h14a2 2 0 0 0 2-2V7l-4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2Z" /></svg>
+          <span>Hours</span>
+        </button>
+        <button class="nav-item" data-target="profile" aria-label="Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0m12-13a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z" /></svg>
+          <span>Profile</span>
+        </button>
+      </nav>
+    </main>
+
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+        <div class="modal-actions" id="modal-actions"></div>
+      </div>
+    </div>
+
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
