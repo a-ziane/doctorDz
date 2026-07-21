@@ -806,6 +806,12 @@ function handleDocumentClick(event) {
     return;
   }
 
+  const targetButton = event.target.closest("[data-target]");
+  if (targetButton) {
+    navigate(targetButton.dataset.target);
+    return;
+  }
+
   const filterButton = event.target.closest("[data-filter]");
   if (filterButton) {
     appState.appointmentFilter = filterButton.dataset.filter;
