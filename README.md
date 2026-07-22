@@ -12,6 +12,7 @@ Doctor DZ is the doctor-facing dashboard for the same Supabase project used by P
 - Weekly availability CRUD through `doctor_working_days`.
 - Time off creation/deletion through `doctor_time_off`.
 - Profile and linked clinic editing with verification status messaging.
+- French default interface with Profile language buttons for French, Arabic, and English.
 - Responsive sidebar on desktop/tablet and bottom navigation on mobile.
 
 ## Supabase Setup
